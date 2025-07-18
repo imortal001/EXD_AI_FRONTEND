@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml+png" href="./src/assets/xpd1.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <div class="meteor-shower">
+  <!-- Generate multiple meteors with inline styles for delay and position -->
+  <div class="meteor" style="top: 10%; left: 80%; animation-duration: 2s; animation-delay: 0s;"></div>
+  <div class="meteor" style="top: 20%; left: 90%; animation-duration: 1.5s; animation-delay: 1s;"></div>
+  <div class="meteor" style="top: 30%; left: 70%; animation-duration: 2.5s; animation-delay: 2s;"></div>
+  <div class="meteor" style="top: 40%; left: 85%; animation-duration: 2s; animation-delay: 3s;"></div>
+  <div class="meteor" style="top: 50%; left: 95%; animation-duration: 3s; animation-delay: 4s;"></div>
+</div>
+
+  <script>
+  const container = document.querySelector(".meteor-shower");
+
+  for (let i = 0; i < 30; i++) {
+    const meteor = document.createElement("div");
+    meteor.classList.add("meteor");
+    meteor.style.top = `${Math.random() * 80}vh`; // random vertical position
+    meteor.style.right = `${Math.random() * 30}vw`; // from right side
+    meteor.style.animationDuration = `${4 + Math.random() * 2}s`;
+    meteor.style.animationDelay = `${Math.random() * 5}s`;
+    container.appendChild(meteor);
+  }
+</script>
+
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
