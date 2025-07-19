@@ -10,7 +10,7 @@ import HomeAI from './AIComponents/HomeAI'
 import { AuthProvider } from './context/AuthContext'
 import AIBlog from './Components/AIBlog'
 import ProtectedRoute from './Components/ProtectedRoute'
-import RazorpayCheckout from './Components/RasorPayCheckOut'
+import RazorpayCheckout from './Components/RasorpayCheckout'
 import RazorpayCheckout2 from './Components/ResorpayCheckout2'
 function App() {
 

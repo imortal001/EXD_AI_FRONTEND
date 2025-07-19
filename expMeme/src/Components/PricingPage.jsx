@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from './Navbar'
 import { motion } from 'framer-motion'
-import RazorpayCheckout from './RasorPayCheckOut'
+import RazorpayCheckout from './RasorpayCheckout'
 import RazorpayCheckout2 from './ResorpayCheckout2'
 import { Link } from 'react-router-dom'
 
