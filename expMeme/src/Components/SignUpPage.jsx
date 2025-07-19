@@ -4,9 +4,11 @@ import Navbar from './Navbar';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 // API call function for signup
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5000";
+
 export const handleSignUp = async (name, email, password) => {
   try {
-    const res = await axios.post("http://localhost:5000/api/auth/signup", {
+    const res = await axios.post(`${API_BASE_URL}/api/auth/signup`, {
       name,
       email,
       password,
